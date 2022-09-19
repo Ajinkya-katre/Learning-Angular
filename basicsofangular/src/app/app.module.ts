@@ -7,6 +7,7 @@ import { FrontendComponent } from './frontend/frontend.component';
 import { BackendComponent } from './backend/backend.component';
 import { PhpComponent } from './backend/php/php.component';
 import { DatabaseComponent } from './database/database.component';
+import { FrameworkComponent } from './framework/framework.component';
 
 
 
@@ -16,7 +17,8 @@ import { DatabaseComponent } from './database/database.component';
     FrontendComponent,
     BackendComponent,
     PhpComponent,
-    DatabaseComponent
+    DatabaseComponent,
+    FrameworkComponent
   ],
   imports: [
     BrowserModule,
