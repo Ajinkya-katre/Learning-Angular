@@ -8,8 +8,7 @@ import { BackendComponent } from './backend/backend.component';
 import { PhpComponent } from './backend/php/php.component';
 import { DatabaseComponent } from './database/database.component';
 import { FrameworkComponent } from './framework/framework.component';
-
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +21,8 @@ import { FrameworkComponent } from './framework/framework.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

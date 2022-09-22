@@ -1,17 +1,44 @@
-<h1>Hello World Of Angular </h1>
+<h2>{{title}}</h2>
 <h1>
   My name is : {{name}}
 </h1>
-<p>
+<!-- <p>
     {{cars[1]}}
 </p>
 
 <h2>{{student.name}}</h2>
 <h2>{{student.age}}</h2>
-<h2>{{student.greet()}}</h2>
+<h2>{{student.greet()}}</h2> -->
 
-<app-frontend></app-frontend>
-<app-backend></app-backend>
+<!-- <app-frontend></app-frontend>
+<app-backend></app-backend> -->
+
+<!-- Data-binding 
+  one-way binding (interpolation) ===> {{}}
+  property binding
+  event binding
+  two-way binding
+
+
+-->
+
+<button disabled value="{{studentStatus}}">Stud</button>
+<button [disabled]="studentStatus">Student detail</button>
+<!-- <img [src]="imageUrl" alt=""> -->
+
+<br><br>
+<h2 [style.color]="color">Hi HEllO THIS IS ANGULAR</h2>
+<!-- <button (click)="onClickedOnData()">Click</button> -->
+<!-- username <input type="text" [(ngModel)]="userName"/> -->
+<!-- <p>{{userName}}</p> -->
+
+<button (click)="clickP()">+</button>
+<input type="text" value="{{clickCount}}">
+<button (click)="clickM()">-</button>
+
+<p>{{studentData}}</p>
+
+
 
 <router-outlet></router-outlet>
 
