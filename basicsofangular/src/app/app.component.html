@@ -32,13 +32,86 @@
 <!-- username <input type="text" [(ngModel)]="userName"/> -->
 <!-- <p>{{userName}}</p> -->
 
-<button (click)="clickP()">+</button>
+<!-- <button (click)="clickP()">+</button>
 <input type="text" value="{{clickCount}}">
 <button (click)="clickM()">-</button>
 
-<p>{{studentData}}</p>
+<p>{{studentData}}</p> -->
 
+<!-- <div class="container bg-danger">
+  <h1>Directive</h1>
+  <ul>
+    <li>Component Directive</li>
+    <li>Structural Directive -- *
+          <ul>
+            <li>for *ngFor</li>
+            <li>if *ngIf</li>
+            <li>Switch</li>
+          </ul>
+    </li>  
+    <li>Attribute Directive</li>
 
+  </ul>
+</div> -->
+
+<div class="container">
+
+  <!-- <div *ngFor="let stud of studentData; let n = index;"> 
+    <p> {{n + 1 }} - {{ stud}}</p>
+  </div> -->
+
+</div>
+
+<div *ngIf="isDataAvaliable;then vab ;else dur">
+  <h1>Movies</h1>
+</div>
+
+<ng-template class="container" #vab>
+    <table class="table table-bordered table-dark table-striped table-hover table-responsive">
+      <thead>
+        <tr>
+          <th>sr.no</th>
+          <th>title</th>
+          <th>director</th>
+          <th>cast</th>
+          <th>release date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let mov of movies; let i= index">
+
+          <td>{{i+1}}</td>
+          <td>{{mov.title}}</td>
+          <td>{{mov.director}}</td>
+          <td>{{mov.cast}}</td>
+          <td>{{mov.releaseDate}}</td>
+
+        </tr>
+      </tbody>
+    </table>
+</ng-template>
+
+<ng-template #dur>
+    <h1>Please Buy Ticket</h1>
+</ng-template>
+
+<!-- switch(){  --- [ngSwitch]
+  case 1:  --- *ngSwitchCase
+  case 2:  --- *ngSwitchCase
+
+  default  --- *ngSwitchDefault
+} -->
+
+Enter Input <input type="text" [(ngModel)]="num" />
+
+<div [ngSwitch]="num">
+  <div *ngSwitchCase="'1'">One</div>
+  <div *ngSwitchCase="'2'">Two</div>
+  <div *ngSwitchCase="'3'">Three</div>
+  <div *ngSwitchCase="'4'">Four</div>
+  <div *ngSwitchCase="'5'">Five</div>
+  <div *ngSwitchDefault>This is Default</div>
+</div>
 
 <router-outlet></router-outlet>
 
