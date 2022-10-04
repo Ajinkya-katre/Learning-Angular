@@ -9,6 +9,11 @@ import { PhpComponent } from './backend/php/php.component';
 import { DatabaseComponent } from './database/database.component';
 import { FrameworkComponent } from './framework/framework.component';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule} from '@angular/material/button';
+import {MatBadgeModule} from '@angular/material/badge';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +22,17 @@ import { FormsModule } from '@angular/forms';
     BackendComponent,
     PhpComponent,
     DatabaseComponent,
-    FrameworkComponent
+    FrameworkComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

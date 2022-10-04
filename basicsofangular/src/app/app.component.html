@@ -1,3 +1,5 @@
+
+<app-header></app-header>
 <h2>{{title}}</h2>
 <h1>
   My name is : {{name}}
@@ -113,5 +115,30 @@ Enter Input <input type="text" [(ngModel)]="num" />
   <div *ngSwitchDefault>This is Default</div>
 </div>
 
-<router-outlet></router-outlet>
+<p [ngClass]="'red size20'">This is Class Directive</p>
 
+<p [ngStyle]="{'font-size':'2rem'}">This is Style Class</p>
+
+<div [ngStyle]="{'background-color':status === 'error' ? 'red' : 'blue' }"> THis is Multiple Style </div>
+
+
+<p > {{today | date:'shortDate'}}</p>
+
+<p>{{msg | lowercase | slice:11:14}}</p>
+
+<p>{{num1 | currency }}</p>
+<div class="container">
+  
+ 
+    <button mat-raised-button color="primary"
+    matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+    Login
+    </button>
+
+</div><br>
+
+
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+
+<app-framework></app-framework>

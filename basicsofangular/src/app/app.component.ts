@@ -69,8 +69,17 @@ export class AppComponent {
   {title:'Warcraft',director:'Duncan Jones',cast:'Travis Fimmel, Robert Kazinsky, Ben Foster',releaseDate:'June 10, 2016'},
 ]
 
-isDataAvaliable = false;
+isDataAvaliable = true;
 
 num = ''
+
+status = 'error'
+data1 = 'Today is Saturday'
+
+today = new Date();
+
+msg: string= 'Welcome to Angular ';
+
+num1: number= 9542.14554;
 
 }
